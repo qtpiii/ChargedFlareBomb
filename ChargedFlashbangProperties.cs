@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedFlashbang
+namespace ChargedFlashbang
 {
-    public class RedFlashbangProperties : ItemProperties
+    public class ChargedFlashbangProperties : ItemProperties
     {
         public override void Throwable(Player player, ref bool throwable) => throwable = true;
 

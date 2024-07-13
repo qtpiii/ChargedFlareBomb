@@ -2,13 +2,13 @@
 using Noise;
 using UnityEngine;
 
-namespace RedFlashbang
+namespace ChargedFlashbang
 {
-    public class RedFlashbang : FlareBomb
+    public class ChargedFlashbang : FlareBomb
     {
-        public RedFlashbang(AbstractPhysicalObject abstractPhysicalObject, World world) : base(abstractPhysicalObject, world)
+        public ChargedFlashbang(AbstractConsumable abstractConsumable, World world) : base(abstractConsumable, world)
         {
-            this.color = new Color(1f, 0f, 0.1f);
+            this.color = new Color(1f, 0.5f, 0.1f);
         }
 
         public override void Update(bool eu)

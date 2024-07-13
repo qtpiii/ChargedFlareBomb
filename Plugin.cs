@@ -8,12 +8,12 @@ using UnityEngine;
 using Fisobs.Core;
 using BepInEx.Logging;
 
-namespace RedFlashbang
+namespace ChargedFlashbang
 {
-    [BepInPlugin(MOD_ID, "Red Flashbang", "1.0.0")]
+    [BepInPlugin(MOD_ID, "Charged Flashbang", "1.0.0")]
     public class Plugin : BaseUnityPlugin
     {
-        private const string MOD_ID = "qtpi.red-flashbang";
+        private const string MOD_ID = "qtpi.charged-flashbang";
 
         public void OnEnable()
         {
@@ -29,7 +29,7 @@ namespace RedFlashbang
 
         public void RegisterFisobs()
         {
-            Content.Register(new RedFlashbangFisob());
+            Content.Register(new ChargedFlashbangFisob());
         }
     }
 }
