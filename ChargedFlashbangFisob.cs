@@ -15,7 +15,7 @@ namespace ChargedFlashbang
 
         public ChargedFlashbangFisob() : base(AbstractChargedFlashbang)
         {
-            Icon = new SimpleIcon("Symbol_FlashBomb", new Color(1f, 0.8f, 0.3f));
+            Icon = new SimpleIcon("Symbol_FlashBomb", new Color(1f, 0.7f, 0.4f));
 
             SandboxPerformanceCost = new(linear: 0.2f, 0f);
 
