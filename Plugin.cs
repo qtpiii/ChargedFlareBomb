@@ -11,7 +11,7 @@ using BepInEx.Logging;
 namespace RedFlashbang
 {
     [BepInPlugin(MOD_ID, "Red Flashbang", "1.0.0")]
-    public class Plugin
+    public class Plugin : BaseUnityPlugin
     {
         private const string MOD_ID = "qtpi.red-flashbang";
 
@@ -23,7 +23,7 @@ namespace RedFlashbang
             }
             catch (Exception ex)
             {
-                UnityEngine.Debug.LogError(ex);
+                Logger.LogError(ex);
             }
         }
 

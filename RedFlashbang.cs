@@ -23,5 +23,6 @@ namespace RedFlashbang
                 this.Destroy();
             }
         }
+
     }
 }

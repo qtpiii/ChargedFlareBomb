@@ -16,24 +16,13 @@ namespace RedFlashbang
             grabability = Player.ObjectGrabability.OneHand;
         }
 
-        public override void LethalWeapon(Scavenger scav, ref bool isLethal)
-        {
-            isLethal = true;
-        }
+        public override void LethalWeapon(Scavenger scav, ref bool isLethal) => isLethal = true;
 
-        public override void ScavWeaponPickupScore(Scavenger scav, ref int score)
-        {
-            score = 1;
-        }
+        public override void ScavWeaponPickupScore(Scavenger scav, ref int score) => score = 4;
 
-        public override void ScavCollectScore(Scavenger scav, ref int score)
-        {
-            score = 4;
-        }
+        public override void ScavCollectScore(Scavenger scav, ref int score) => score = 4;
 
-        public override void ScavWeaponUseScore(Scavenger scav, ref int score)
-        {
-            score = 2;
-        }
+        public override void ScavWeaponUseScore(Scavenger scav, ref int score) => score = 2;
+
     }
 }

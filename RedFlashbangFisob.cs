@@ -14,7 +14,7 @@ namespace RedFlashbang
 
         public RedFlashbangFisob() : base(AbstractRedFlashbang)
         {
-            Icon = new SimpleIcon("Symbol_FlashBomb", new Color(1f, 0f, 0.1f));
+            Icon = new SimpleIcon("Symbol_FlashBomb", new Color(1f, 0.5f, 0.6f));
 
             SandboxPerformanceCost = new(linear: 0.2f, 0f);
 
