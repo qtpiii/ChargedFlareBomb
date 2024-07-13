@@ -7,6 +7,7 @@ using BepInEx;
 using UnityEngine;
 using Fisobs.Core;
 using BepInEx.Logging;
+using static Pom.Pom;
 
 namespace ChargedFlashbang
 {
@@ -20,6 +21,7 @@ namespace ChargedFlashbang
             try
             {
                 RegisterFisobs();
+                RegisterPOM();
             }
             catch (Exception ex)
             {
@@ -30,6 +32,11 @@ namespace ChargedFlashbang
         public void RegisterFisobs()
         {
             Content.Register(new ChargedFlashbangFisob());
+        }
+
+        public void RegisterPOM()
+        {
+            RegisterEmptyObjectType<ChargedFlashbangData, ManagedRepresentation>("Charged Flashbang", null);
         }
     }
 }
