@@ -9,12 +9,12 @@ using Fisobs.Core;
 using BepInEx.Logging;
 using static Pom.Pom;
 
-namespace ChargedFlashbang
+namespace ChargedFlareBomb
 {
-    [BepInPlugin(MOD_ID, "Charged Flashbang", "1.0.0")]
+    [BepInPlugin(MOD_ID, "Charged Flare Bomb", "1.0.0")]
     public class Plugin : BaseUnityPlugin
     {
-        private const string MOD_ID = "qtpi.charged-flashbang";
+        private const string MOD_ID = "qtpi.charged-flare-bomb";
 
         public void OnEnable()
         {
@@ -31,12 +31,12 @@ namespace ChargedFlashbang
 
         public void RegisterFisobs()
         {
-            Content.Register(new ChargedFlashbangFisob());
+            Content.Register(new ChargedFlareBombFisob());
         }
 
         public void RegisterPOM()
         {
-            RegisterEmptyObjectType<ChargedFlashbangData, ManagedRepresentation>("Charged Flashbang", null);
+            RegisterManagedObject<ChargedFlareBombObject, ChargedFlareBombData, ManagedRepresentation>("Charged Flashbang", null);
         }
     }
 }

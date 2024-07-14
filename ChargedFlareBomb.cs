@@ -3,11 +3,11 @@ using Noise;
 using UnityEngine;
 using Smoke;
 
-namespace ChargedFlashbang
+namespace ChargedFlareBomb
 {
-    public class ChargedFlashbang : FlareBomb
+    public class ChargedFlareBomb : FlareBomb
     {
-        public ChargedFlashbang(AbstractConsumable abstractConsumable, World world) : base(abstractConsumable, world)
+        public ChargedFlareBomb(AbstractConsumable abstractConsumable, World world) : base(abstractConsumable, world)
         {
             this.color = new Color(1f, 0.3f, 0.1f);
             this.bounce = 0.4f;
@@ -53,10 +53,6 @@ namespace ChargedFlashbang
                     {
                         this.smoke.EmitWithMyLifeTime(this.firstChunk.pos + Custom.RNV(), Custom.RNV() * UnityEngine.Random.value * 17f);
                     }
-                }
-                for (int l = 0; l < 6; l++)
-                {
-                    this.room.AddObject(new ScavengerBomb.BombFragment(this.firstChunk.pos, Custom.DegToVec(((float)l + UnityEngine.Random.value) / 6f * 360f) * Mathf.Lerp(18f, 38f, UnityEngine.Random.value)));
                 }
                 this.room.ScreenMovement(new Vector2?(this.firstChunk.pos), default(Vector2), 1.3f);
                 for (int m = 0; m < this.abstractPhysicalObject.stuckObjects.Count; m++)

@@ -8,8 +8,8 @@
     <ProjectGuid>{FDC36CD0-F81C-4D55-9C2B-B37E3DC75FF3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChargedFlashbang</RootNamespace>
-    <AssemblyName>ChargedFlashbang</AssemblyName>
+    <RootNamespace>ChargedFlareBomb</RootNamespace>
+    <AssemblyName>ChargedFlareBomb</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -72,13 +72,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChargedFlashbangData.cs" />
+    <Compile Include="ChargedFlareBombPOM.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ChargedFlashbang.cs" />
-    <Compile Include="ChargedFlashbangAbstract.cs" />
-    <Compile Include="ChargedFlashbangFisob.cs" />
-    <Compile Include="ChargedFlashbangProperties.cs" />
+    <Compile Include="ChargedFlareBomb.cs" />
+    <Compile Include="ChargedFlareBombAbstract.cs" />
+    <Compile Include="ChargedFlareBombFisob.cs" />
+    <Compile Include="ChargedFlareBombProperties.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
