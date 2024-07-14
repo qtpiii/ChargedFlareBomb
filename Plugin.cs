@@ -22,9 +22,7 @@ namespace ChargedFlareBomb
                 RegisterFisobs();
                 RegisterPOM();
 
-                //IL.Player.SwallowObject += ArtiCraftChargedFlare;
-
-                //On.Player.SwallowObject += Player_SwallowObject;
+                On.Player.SwallowObject += Player_SwallowObject;
             }
             catch (Exception ex)
             {
@@ -32,38 +30,18 @@ namespace ChargedFlareBomb
             }
         }
 
-        //i tried lol
-
-        //private void ArtiCraftChargedFlare(ILContext il)
-        //{
-        //    ILCursor cursor = new(il);
-        //    cursor.GotoNext(
-        //        x => x.MatchLdarg(0),
-        //        x => x.MatchLdfld<UpdatableAndDeletable>("room"),
-        //        x => x.MatchLdfld<Room>("game"),
-        //        x => x.MatchCallvirt<RainWorldGame>("GetNewID"),
-        //        x => x.MatchNewobj<AbstractPhysicalObject>(),
-        //        x => x.MatchStloc(0),
-        //        x => x.MatchLdarg(0),
-        //        x => x.MatchLdcI4(1),
-        //        x => x.MatchCall<Player>("SubtractFood")
-        //        );
-        //    cursor.Index += 8;
-        //    cursor.Emit(OpCodes.Br_S, );
-        //}
-
-        //private void Player_SwallowObject(On.Player.orig_SwallowObject orig, Player self, int grasp)
-        //{
-        //    orig(self, grasp);
-        //    if (ModManager.MSC && self.SlugCatClass == MoreSlugcatsEnums.SlugcatStatsName.Artificer && self.FoodInStomach > 0)
-        //    {
-        //        if (self.abstractPhysicalObject.type == AbstractPhysicalObject.AbstractObjectType.Lantern)
-        //        {
-        //            self.abstractPhysicalObject = new AbstractPhysicalObject(self.room.world, ChargedFlareBombFisob.AbstractChargedFlareBomb, null, self.room.GetWorldCoordinate(self.mainBodyChunk.pos), self.room.game.GetNewID());
-        //            self.SubtractFood(1);
-        //        }
-        //    }
-        //}
+        private void Player_SwallowObject(On.Player.orig_SwallowObject orig, Player self, int grasp)
+        {
+            orig(self, grasp);
+            if (ModManager.MSC && self.SlugCatClass == MoreSlugcatsEnums.SlugcatStatsName.Artificer && self.FoodInStomach > 0)
+            {
+                if (self.objectInStomach.type == AbstractPhysicalObject.AbstractObjectType.Lantern)
+                {
+                    self.objectInStomach = new ChargedFlareBombAbstract(self.room.world, null, self.room.GetWorldCoordinate(self.mainBodyChunk.pos), self.room.game.GetNewID(), 0, 0, null);
+                    self.SubtractFood(1);
+                }
+            }
+        }
 
         public void RegisterFisobs()
         {
