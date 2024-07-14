@@ -36,7 +36,7 @@ namespace ChargedFlareBomb
 
         public void RegisterPOM()
         {
-            RegisterManagedObject<ChargedFlareBombObject, ChargedFlareBombData, ManagedRepresentation>("Charged Flare Bomb", null);
+            RegisterManagedObject<ChargedFlareBombObject, ChargedFlareBombData, ManagedRepresentation>("ChargedFlareBomb", null);
         }
     }
 }
