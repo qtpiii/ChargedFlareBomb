@@ -11,10 +11,10 @@ using static Pom.Pom;
 
 namespace ChargedFlareBomb
 {
-    [BepInPlugin(MOD_ID, "Charged Flare Bomb", "1.0.0")]
+    [BepInPlugin(MOD_ID, "Charged Flare Bombs", "1.0.0")]
     public class Plugin : BaseUnityPlugin
     {
-        private const string MOD_ID = "qtpi.charged-flare-bomb";
+        private const string MOD_ID = "qtpi.charged-flare-bombs";
 
         public void OnEnable()
         {
@@ -36,7 +36,7 @@ namespace ChargedFlareBomb
 
         public void RegisterPOM()
         {
-            RegisterManagedObject<ChargedFlareBombObject, ChargedFlareBombData, ManagedRepresentation>("Charged Flashbang", null);
+            RegisterManagedObject<ChargedFlareBombObject, ChargedFlareBombData, ManagedRepresentation>("Charged Flare Bomb", null);
         }
     }
 }
